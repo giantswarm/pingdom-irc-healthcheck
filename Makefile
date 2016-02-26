@@ -22,7 +22,8 @@ clean:
 	@mkdir -p $(GS_PATH)
 	@rm -f $(GS_PATH)/$(PROJECT) && cd "$(GS_PATH)" && ln -s ../../../.. $(PROJECT)
 
-	@builder get dep https://github.com/sorcix/irc $(GOPATH)/src/github.com/sorcix/irc
+	@builder get dep https://github.com/thoj/go-ircevent $(GOPATH)/src/github.com/thoj/go-ircevent
+	@builder get dep https://github.com/juju/errgo $(GOPATH)/src/github.com/juju/errgo
 
 $(BIN): $(SOURCE) VERSION .gobuild
 	@echo Building inside Docker container for $(GOOS)/$(GOARCH)
