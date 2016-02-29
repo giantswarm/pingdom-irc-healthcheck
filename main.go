@@ -69,5 +69,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	elapsedSeconds := time.Since(start).Seconds()
 
+	log.Printf("Returning response")
+
 	fmt.Fprintf(w, PingdomTemplate, status, elapsedSeconds)
 }
