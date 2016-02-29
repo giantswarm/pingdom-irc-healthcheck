@@ -9,7 +9,7 @@ BIN := $(PROJECT)
 VERSION := $(shell cat VERSION)
 COMMIT := $(shell git rev-parse --short HEAD)
 
-.PHONY: all clean .gobuild
+.PHONY: all clean docker
 
 SOURCE=$(shell find . -name '*.go')
 
@@ -36,3 +36,6 @@ $(BIN): $(SOURCE) VERSION .gobuild
 	    -w /usr/code \
 	    golang:1.6 \
 	    go build -a -o $(BIN)
+
+docker: $(BIN)
+	docker build -t $(PROJECT):latest .
