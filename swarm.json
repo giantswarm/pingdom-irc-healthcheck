@@ -1,0 +1,12 @@
+{
+	"name": "pingdom-irc-healthcheck",
+	"components": {
+        "pingdom-irc-healthcheck": {
+            "image": "giantswarm/pingdom-irc-healthcheck",
+			"ports": 8000,
+			"domains": {
+				"8000": "pingdom-irc-healthcheck.gigantic.io"
+			}
+        }
+	}
+}
