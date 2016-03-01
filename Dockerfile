@@ -1,4 +1,4 @@
-FROM golang:1.6
+FROM scratch
 MAINTAINER Joseph Salisbury <joseph@giantswarm.io>
 
 ADD ./pingdom-irc-healthcheck /pingdom-irc-healthcheck
