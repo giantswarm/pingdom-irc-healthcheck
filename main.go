@@ -11,6 +11,7 @@ import (
 )
 
 const (
+	LogPrefix       = "pingdom-irc-healthcheck: "
 	PingdomTemplate = `<pingdom_http_custom_check>
 	<status>%v</status>
 	<response_time>%v</response_time>
@@ -27,6 +28,8 @@ var (
 )
 
 func main() {
+	log.SetPrefix(LogPrefix)
+
 	log.Println("Starting server on port:", Port)
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":"+Port, nil)
