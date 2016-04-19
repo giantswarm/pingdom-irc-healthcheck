@@ -35,7 +35,7 @@ $(BIN): $(SOURCE) VERSION .gobuild
 	    -e GOARCH=$(GOARCH) \
 		-e CGO_ENABLED=0 \
 	    -w /usr/code \
-	    golang:1.6 \
+	    golang:1.6.1 \
 		go build -a -installsuffix cgo -o $(BIN)
 
 docker: $(BIN)
