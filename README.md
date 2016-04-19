@@ -7,7 +7,7 @@
 
 Works well with [slack-ircbridge](https://github.com/giantswarm/slack-ircbridge).
 
-## Getting Project
+## Getting pingdom-irc-healthcheck
 
 Clone the git repository: https://github.com/giantswarm/pingdom-irc-healthcheck.git
 
@@ -25,7 +25,7 @@ Download the latest docker image from here: https://hub.docker.com/r/giantswarm/
 - Use `make` to build the binary.
 - To build the Docker image, build the binary for linux using `GOOS=linux make`, and then build the image with `make docker`.
 
-## Running PROJECT
+## Running pingdom-irc-healthcheck
 
 - `pingdom-irc-healthcheck` is currently designed to work in a Giant Swarm cluster. A Docker image is also available, for running in other environments.
 
@@ -41,4 +41,4 @@ See [CONTRIBUTING](CONTRIBUTING.md) for details on submitting patches, the contr
 
 ## License
 
-PROJECT is under the Apache 2.0 license. See the [LICENSE](LICENSE) file for details.
+`pingdom-irc-healthcheck` is under the Apache 2.0 license. See the [LICENSE](LICENSE) file for details.
